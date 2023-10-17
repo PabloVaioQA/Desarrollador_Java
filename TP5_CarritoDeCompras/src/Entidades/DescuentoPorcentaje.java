@@ -5,11 +5,10 @@ package Entidades;
  * @author vaiop
  */
 public class DescuentoPorcentaje extends Descuento{
-    
-    private double porcentaje;
 
-    public DescuentoPorcentaje(double porcentaje) {
-        this.porcentaje = 0.2;
+    @Override
+    public float valorFinal(float valorInicial) {
+        return valorInicial -(valorInicial * this.getValorDesc());
     }
     
     

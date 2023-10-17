@@ -6,11 +6,11 @@ package Entidades;
  */
 public class DescuentoFijo extends Descuento {
     
-    private int monto;
-
-    public DescuentoFijo(int monto) {
-        this.monto = 5;
-    }
+    
+   @Override 
+   public float valorFinal(float valorInicial){
+       return valorInicial - this.getValorDesc();
+   }
     
 
 }

@@ -2,6 +2,10 @@
 package tp5_carritodecompras;
 
 import Entidades.Carrito;
+import Entidades.Descuento;
+import Entidades.DescuentoFijo;
+import Entidades.DescuentoPorcentaje;
+import Entidades.DescuentoPorcentajeConTope;
 import Entidades.ItemCarrito;
 import Entidades.Producto;
 import java.io.BufferedReader;
@@ -77,7 +81,24 @@ public class TP5_CarritoDeCompras {
         
         Carrito carrito = new Carrito(0, itemsCarrito);
         System.out.println("El precio total del carrito es: " + carrito.precioCarrito());
+        
+        
+        
+        
+        Descuento desc1 = new DescuentoFijo();
+        desc1.setValordesc((float) 14.0);
+        System.out.println(desc1.valorFinal(100)); // 86
+        //-----------------------------
+        Descuento desc2 = new DescuentoPorcentaje();
+        desc2.setValordesc((float) 0.3);
+        System.out.println(desc2.valorFinal(100)); // 70
+        //-----------------------------
+        Descuento desc3 = new DescuentoPorcentajeConTope();
+        desc3.setValordesc((float) 0.3);
+        System.out.println(desc3.valorFinal(100)); // 70
+        System.out.println(desc3.valorFinal(200)); // 160 Solo decuenta 40
     }
+    
 }
     
     

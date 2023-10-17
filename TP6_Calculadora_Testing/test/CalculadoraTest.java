@@ -52,6 +52,7 @@ public class CalculadoraTest {
         double resultado = 110;
         
         assertEquals(resultado, calc.Division(calc.Suma(unNumero, otroNumero), num3) , 0);
+        assertEquals()
     }
     //3. El resultado de restar 90 y 50, multiplicado por 15, no da 605.
     @Test
@@ -60,7 +61,7 @@ public class CalculadoraTest {
         double unNumero = 90;
         double otroNumero = 50;
         double num3 = 15;
-        double resultado = 605;
+        double resultado = 600;
         
         assertNotEquals(resultado, calc.Multiplicacion(calc.Resta(unNumero, otroNumero), num3) , 0);
     }

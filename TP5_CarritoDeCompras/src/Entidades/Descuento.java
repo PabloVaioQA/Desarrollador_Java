@@ -8,13 +8,17 @@ import java.time.LocalDate;
  * @author vaiop
  */
 public abstract class Descuento {
-    private LocalDate comienzo;
-    private LocalDate fin;
-
-    public int descuento(int base){
-    int desc = 1;
     
-    return desc;
+    private float valor;
+    
+    public float getValorDesc(){
+        return valor;
+    }
+
+    public void setValordesc(float valor){
+    this.valor = valor;
     
     }
+    
+    public abstract float valorFinal(float valorInicial);
 }
