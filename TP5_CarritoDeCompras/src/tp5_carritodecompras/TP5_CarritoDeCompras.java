@@ -85,6 +85,10 @@ public class TP5_CarritoDeCompras {
         
         
         
+        
+        
+        
+        
         Descuento desc1 = new DescuentoFijo();
         desc1.setValordesc((float) 14.0);
         System.out.println(desc1.valorFinal(100)); // 86
